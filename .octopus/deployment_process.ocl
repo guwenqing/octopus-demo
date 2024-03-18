@@ -9,7 +9,10 @@ step "run-a-script" {
         action_type = "Octopus.Script"
         is_required = true
         properties = {
-            Octopus.Action.Script.ScriptBody = "echo \"xx\""
+            Octopus.Action.Script.ScriptBody = <<-EOT
+                echo "xx"
+                sleep 600
+                EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
         }
