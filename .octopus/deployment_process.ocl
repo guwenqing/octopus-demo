@@ -1,8 +1,5 @@
 step "run-a-script" {
     name = "Run a Script"
-    properties = {
-        Octopus.Action.TargetRoles = "app"
-    }
 
     action {
         action_type = "Octopus.Script"
