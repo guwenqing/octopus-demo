@@ -2,7 +2,6 @@ step "deploy" {
     name = "Deploy"
     properties = {
         Octopus.Action.MaxParallelism = "1"
-        Octopus.Action.TargetRoles = "app"
     }
 
     action {
@@ -15,6 +14,6 @@ step "deploy" {
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
         }
-        worker_pool = "hosted-ubuntu"
+        worker_pool = "hosted-windows"
     }
 }
