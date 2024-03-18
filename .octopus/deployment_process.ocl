@@ -2,7 +2,7 @@ step "run-a-script" {
     name = "Run a Script"
     properties = {
         Octopus.Action.MaxParallelism = "1"
-        Octopus.Action.TargetRoles = "app,test123"
+        Octopus.Action.TargetRoles = "app"
     }
 
     action {
