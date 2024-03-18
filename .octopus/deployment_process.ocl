@@ -13,7 +13,6 @@ step "run-a-script" {
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
         }
-        tenant_tags = ["value/cheap", "locked/not-locked"]
         worker_pool = "hosted-ubuntu"
     }
 }
