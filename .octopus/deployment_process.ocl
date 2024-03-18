@@ -1,5 +1,5 @@
-step "run-a-script" {
-    name = "Run a Script"
+step "deploy" {
+    name = "Deploy"
     properties = {
         Octopus.Action.MaxParallelism = "1"
         Octopus.Action.TargetRoles = "app"
@@ -7,15 +7,14 @@ step "run-a-script" {
 
     action {
         action_type = "Octopus.Script"
-        is_required = true
         properties = {
             Octopus.Action.Script.ScriptBody = <<-EOT
-                echo "xx"
-                sleep 600
+                echo "Deploy is done"
+                sleep 30
                 EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
         }
-        worker_pool = "hosted-ubuntu"
+        worker_pool = "hosted-windows"
     }
 }
