@@ -2,6 +2,7 @@ step "deploy" {
     name = "Deploy"
     properties = {
         Octopus.Action.MaxParallelism = "1"
+        Octopus.Action.TargetRoles = "app"
     }
 
     action {
