@@ -8,7 +8,7 @@ step "deploy" {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.Script.ScriptBody = <<-EOT
-                echo "Deploy is done"
+                echo "Deploy is done 123"
                 sleep 30
                 EOT
             Octopus.Action.Script.ScriptSource = "Inline"
